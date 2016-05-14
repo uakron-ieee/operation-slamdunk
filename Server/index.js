@@ -53,7 +53,9 @@ app.post('/api/report/', function(req, res) {
 });
 
 app.post('/api/get_lot_info/', function(req, res) {
-	con.query('SELECT  direction , COUNT( direction ) FROM log WHERE lot=2 GROUP BY direction', function(err, rows){
+	var lotNum = req.headers.lot;
+	
+	con.query('SELECT  direction , COUNT( direction ) FROM log WHERE lot=') + lotNum + (' GROUP BY direction', function(err, rows){
 		if(err) throw err; 
 		console.log((rows[0]['COUNT( direction )']-rows[1]['COUNT( direction )']).toString());
 		res.status(200).send(((rows[0]['COUNT( direction )']-rows[1]['COUNT( direction )']).toString()));
@@ -65,20 +67,7 @@ app.post('/api/get_lot_info/', function(req, res) {
 	// return num empty spaces
 });
 	// POST http://localhost:8080/api/users
-// parameters sent with
 
-app.post('/api/users', function(req, res) {
-	var user_id = req.headers.id;
-	var token = req.headers.token;
-	var geo = req.headers.geo
-	console.log(req.headers.id);
-	res.send(user_id + ' ' + token + ' ' + geo);
-});
-
-app.get('/api/testing', function(req, res) {
-	console.log(req);
-	res.send("wow good job");
-});
 
 
 // start the server
