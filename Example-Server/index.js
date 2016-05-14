@@ -7,9 +7,23 @@ var bodyParser = require('body-parser');
 app.use(bodyParser.json()); // support json encoded bodies
 app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 
+app.post('/api/report/', function(req, res) {
 
-// POST http://localhost:8080/api/users
+	// take the request, store each parameter in variable
+	// insert statement to DB
+	// halfsql, halfnode	
+}
+
+app.post('/api/get_lot_info/', function(req, res) {
+	// take request give back number of open parking spaces for a specific lot
+	// sql code to do calculation 
+	// total_spaces-(initial_cars+in-out) = number of empty spaces
+	// return num empty spaces
+	res.send(empty_spots);
+}
+	// POST http://localhost:8080/api/users
 // parameters sent with 
+
 app.post('/api/users', function(req, res) {
 	var user_id = req.headers.id;
 	var token = req.headers.token;
