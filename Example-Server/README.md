@@ -11,11 +11,16 @@ https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddom
   cd Example-Server
   npm install
   node index.js
-
-  ```
- Output: 
- ```
- Server started! At http://localhost:8080
+Output: 
+ >> Server started! At http://localhost:8080
  
  ```
 
+#TODO
+- Support DB connections and queries
+```
+github.com/mroseman95/crypto-plugin
+
+Switch to branch webserver
+```
+ 

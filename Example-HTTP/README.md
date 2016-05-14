@@ -1,6 +1,10 @@
 # Python Post Request
 
 This uses the latest Python. 
+Source: 
+<br>
+http://stackoverflow.com/questions/11322430/python-how-to-send-post-request
+<br>
 <br>
 Try the sample code: 
 ```
@@ -30,7 +34,7 @@ Output:
 ```
 
 Now edit the our-request.py
-- Send a blank request to stoh.io/api/test
+- Send a blank request to stoh.io/api/testing
 - Print the response
 
 
