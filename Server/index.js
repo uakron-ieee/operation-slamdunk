@@ -53,13 +53,16 @@ app.post('/api/report/', function(req, res) {
 });
 
 app.post('/api/get_lot_info/', function(req, res) {
-	con.query('SELECT direction,count(direction) FROM log GROUP by  direction')
+	con.query('SELECT  direction , COUNT( direction ) FROM log WHERE lot=2 GROUP BY direction', function(err, rows){
+		if(err) throw err; 
+		console.log((rows[0]['COUNT( direction )']-rows[1]['COUNT( direction )']).toString());
+		res.status(200).send(((rows[0]['COUNT( direction )']-rows[1]['COUNT( direction )']).toString()));
+	});
 
 	// take request give back number of open parking spaces for a specific lot
 	// sql code to do calculation
 	// total_spaces-(initial_cars+in-out) = number of empty spaces
 	// return num empty spaces
-	res.send(empty_spots);
 });
 	// POST http://localhost:8080/api/users
 // parameters sent with
