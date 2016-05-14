@@ -2,7 +2,7 @@
 
 1. Install Postman
 ```
-https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomo://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop 
+getpostman.com
 ```
 2. Install Node && NPM
   1. (windows) https://nodejs.org/en/download://nodejs.org/en/download/ 
