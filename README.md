@@ -14,7 +14,11 @@ Stretch Goals:
 - Find way to provide dynamic locations (gps coords?)
 - Rewrite code in C
 - http://stackoverflow.com/questions/22077802/simple-c-example-of-doing-an-http-post-and-consuming-the-response 
-<br>~~~~~~~<br>
+
+
+<br>~~~~~~~~~~~~~~~~~~~~~<br>
+
+
 Server Team: 
 - Create a RESTful API
 - Have different endpoints handling requests
@@ -28,7 +32,7 @@ Stretch Goals:
 
 1. Install Postman
 ```
-https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomo://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop 
+getpostman.com
 ```
 2. Install Node && NPM
   1. (windows) https://nodejs.org/en/download://nodejs.org/en/download/ 
