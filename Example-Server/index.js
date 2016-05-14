@@ -18,8 +18,13 @@ app.post('/api/users', function(req, res) {
 	res.send(user_id + ' ' + token + ' ' + geo);
 });
 
+app.get('/api/testing', function(req, res) {
+	console.log("wow good job");
+	res.send("wow good job");
+});
 app.post('/api/testing', function(req, res) {
 	console.log("wow good job");
+	res.send("wow good job");
 });
 // start the server
 app.listen(port);
