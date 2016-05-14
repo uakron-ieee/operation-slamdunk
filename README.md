@@ -29,12 +29,15 @@ Stretch Goals:
 - Create 'adminview'
 - Provide rudimentary data queries (dump db tables, create graphs)
 
+<br>~~~~~~~~~~~~~~~~~~~~~<br>
 
-1. Install Postman
+- Install Postman
 ```
 getpostman.com
 ```
-2. Install Node && NPM
-  1. (windows) https://nodejs.org/en/download://nodejs.org/en/download/ 
-3. Install Python 2.7.9
-4. Make a test query
+- Install Node && NPM
+```
+(windows) https://nodejs.org/en/download://nodejs.org/en/download/ 
+```
+- Install Python 2.7.9
+- Make a test query
