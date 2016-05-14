@@ -18,6 +18,9 @@ app.post('/api/users', function(req, res) {
 	res.send(user_id + ' ' + token + ' ' + geo);
 });
 
+app.post('/api/testing', function(req, res) {
+	console.log("wow good job");
+});
 // start the server
 app.listen(port);
 console.log('Server started! At http://localhost:' + port);
