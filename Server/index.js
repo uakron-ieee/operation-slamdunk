@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 var con = mysql.createConnection({
 	host: "stoh.io",
 	user: "fashionksu",
-	password: "lolipop123",
+	password: "lollipop123",
 	database: "slamdunk"
 });
 
@@ -25,12 +25,30 @@ con.connect(function(err){
 	else
 	console.log('connect established');
 });
+
+app.post('/api/testing', function(req, res) {
+	var myVar = req.headers.time;
+	//insert_to_db(myVar
+	res.send(myVar + 0198232);
+});
+
+
 app.post('/api/report/', function(req, res) {
 
-
+	var report_data = [];
+	var inc_direction = req.headers.direction;
+	var inc_lot = req.headers.lot;
+	var inc_time = req.headers.time;
+	report_data.push({direction: inc_direction, lot: inc_lot, time: inc_time});
+	console.log(report_data);
+	con.query('INSERT INTO log SET ?', report_data, function(err,res){
+		if(err) throw err;
+		console.log('last insert id:', res.insertId);
+	});
 	// take the request, store each parameter in variable
 	// insert statement to DB
 	// halfsql, halfnode
+	res.send("200");
 });
 
 app.post('/api/get_lot_info/', function(req, res) {
@@ -56,11 +74,7 @@ app.get('/api/testing', function(req, res) {
 	res.send("wow good job");
 });
 
-app.post('/api/testing', function(req, res) {
-	var myVar = req.headers.time;
-	//insert_to_db(myVar
-	res.send(myVar + 0198232);
-});
+
 // start the server
 app.listen(port);
 console.log('Server started! At http://localhost:' + port);
