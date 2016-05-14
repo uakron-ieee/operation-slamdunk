@@ -37,9 +37,9 @@ app.post('/api/testing', function(req, res) {
 app.post('/api/report/', function(req, res) {
 
 	var report_data = [];
-	var inc_direction = req.headers.direction;
-	var inc_lot = req.headers.lot;
-	var inc_time = req.headers.time;
+	var inc_direction = req.body.direction;
+	var inc_lot = req.body.lot;
+	var inc_time = req.body.time;
 	report_data.push({direction: inc_direction, lot: inc_lot, time: inc_time});
 	console.log(report_data);
 	con.query('INSERT INTO log SET ?', report_data, function(err,res){
@@ -54,6 +54,7 @@ app.post('/api/report/', function(req, res) {
 
 app.post('/api/get_lot_info/', function(req, res) {
 	var lotNum = req.headers.lot;
+console.log(lotNum);
 	
 	con.query('SELECT  direction , COUNT( direction ) FROM log WHERE lot=') + lotNum + (' GROUP BY direction', function(err, rows){
 		if(err) throw err; 
