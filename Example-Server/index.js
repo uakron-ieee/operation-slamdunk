@@ -19,12 +19,14 @@ app.post('/api/users', function(req, res) {
 });
 
 app.get('/api/testing', function(req, res) {
-	console.log("wow good job");
+	console.log(req);
 	res.send("wow good job");
 });
+
 app.post('/api/testing', function(req, res) {
-	console.log("wow good job");
-	res.send("wow good job");
+	var myVar = req.headers.time;
+	//insert_to_db(myVar
+	res.send(myVar + 0198232);
 });
 // start the server
 app.listen(port);
