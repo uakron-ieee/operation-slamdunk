@@ -1,28 +1,47 @@
 // grab the packages we need
 var express = require('express');
+var mysql = require('mysql');
 var app = express();
 var port = process.env.PORT || 8080;
+
 
 var bodyParser = require('body-parser');
 app.use(bodyParser.json()); // support json encoded bodies
 app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
+var con = mysql.createConnection({
+	host: "stoh.io",
+	user: "fashionksu",
+	password: "lolipop123",
+	database: "slamdunk"
+});
 
+
+
+con.connect(function(err){
+	 if(err){
+		 console.log('error connecting to database');
+			return;
+	}
+	else
+	console.log('connect established');
+});
 app.post('/api/report/', function(req, res) {
+
 
 	// take the request, store each parameter in variable
 	// insert statement to DB
-	// halfsql, halfnode	
-}
+	// halfsql, halfnode
+});
 
 app.post('/api/get_lot_info/', function(req, res) {
 	// take request give back number of open parking spaces for a specific lot
-	// sql code to do calculation 
+	// sql code to do calculation
 	// total_spaces-(initial_cars+in-out) = number of empty spaces
 	// return num empty spaces
 	res.send(empty_spots);
-}
+});
 	// POST http://localhost:8080/api/users
-// parameters sent with 
+// parameters sent with
 
 app.post('/api/users', function(req, res) {
 	var user_id = req.headers.id;
@@ -45,4 +64,3 @@ app.post('/api/testing', function(req, res) {
 // start the server
 app.listen(port);
 console.log('Server started! At http://localhost:' + port);
-
