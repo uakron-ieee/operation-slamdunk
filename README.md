@@ -1,5 +1,7 @@
 # operation-slamdunk
 
+Check examples branch for example RESTful services. 
+<br>
 # GOAL
 Working protoype to show Sastry. 
 - Justify getting funded! 
