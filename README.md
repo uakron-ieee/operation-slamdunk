@@ -1,8 +1,7 @@
-# operation-slamdunk
-
 Check examples branch for example RESTful services. 
 
 # GOAL
+Have an automated system to show how many open spots there are in a parking garage/lot. <br>
 Working protoype to show Sastry. 
 - Success!
 <br> 
@@ -10,7 +9,10 @@ Technology Stack
 - Raspberry Pi with Python and GPIO
 - Node.js with MySQL 
 <br>
+
+
 # Run Code
+
 <br>
 Server: 
 ```
