@@ -11,11 +11,11 @@ Technology Stack
 - Node.js with MySQL 
 <br>
 # Run Code
+<br>
 Server: 
 ```
 cd Server
 npm install
-npm install mysql
 node index.js
 ```
 <br>
